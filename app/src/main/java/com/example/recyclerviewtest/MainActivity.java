@@ -18,17 +18,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initFruits();
-        RecyclerView recyclerView=(RecyclerView) findViewById(R.id.recycler_view);
+        RecyclerView recyclerView=(RecyclerView) findViewById(R.id.msg_recycler_ivew);
         StaggeredGridLayoutManager LayoutManager=new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(LayoutManager);
         FruitAdapter adapter=new FruitAdapter(fruitList);
         recyclerView.setAdapter(adapter);
     }
     private void initFruits(){
-        for(int i=0;i<100;i++) {
-            Fruit apple =new Fruit(getRandomLengthName("Appple"),R.drawable.apple);
-            fruitList.add(apple);
-        }
+//        for(int i=0;i<100;i++) {
+//            Fruit apple =new Fruit(getRandomLengthName("Appple"),R.drawable.apple);
+//            fruitList.add(apple);
+//        }
     }
 
     private String getRandomLengthName(String name) {
